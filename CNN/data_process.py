@@ -93,3 +93,4 @@ def load_data():
     Dte = DataLoader(dataset=test_data, batch_size=50, shuffle=True, num_workers=0)
 
     return Dtr, Val, Dte
+
