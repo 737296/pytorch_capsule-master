@@ -19,6 +19,7 @@ from tqdm import tqdm
 
 from data_process import load_data
 import torch.nn.functional as F
+import tensorflow as tf
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -155,11 +156,12 @@ def test():
         predicted = torch.max(outputs.data, 1)[1].data
         total += target.size(0)
         current += (predicted == target).sum()
+        print('Accuracy:%d%%' % (100 * current / total))
 
     print('Accuracy:%d%%' % (100 * current / total))
 
 
 if __name__ == '__main__':
     print(cnn())
-    # train()
-    # test()
+    train()
+    test()

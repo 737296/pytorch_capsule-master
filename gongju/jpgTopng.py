@@ -22,7 +22,7 @@ def renameFile(img_Dir):
         return
 
 if __name__ == '__main__':
-    img_Dir = "C:/Users/12859/Desktop/123/123/dog/"
+    img_Dir = "C:/Users/Administrator/Desktop/456/test/0"
     renameFile(img_Dir)
 
 

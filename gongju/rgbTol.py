@@ -1,8 +1,8 @@
 from PIL import Image
 import os
 
-INPUT_PATH = r'C:\Users\12859\Desktop\123\123\dog' #原始图像存储路径
-OUPUT_PATH = r'C:\Users\12859\Desktop\123\123\dog_gray' #转化为灰度图像 存储路径
+INPUT_PATH = r'C:\Users\Administrator\Desktop\456\train\2' #原始图像存储路径
+OUPUT_PATH = r'C:\Users\Administrator\Desktop\456\train_gray\2' #转化为灰度图像 存储路径
 files_list = os.listdir(INPUT_PATH)  # 读取列表信息，可打印查看
 
 for file in files_list:
