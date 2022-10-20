@@ -183,7 +183,7 @@ def log():
 
 
 if __name__ == "__main__":
-    num_epochs = 50
+    num_epochs = 100
     start(num_epochs)
     # 写入log 数据
     file = open(flieName, 'a')
