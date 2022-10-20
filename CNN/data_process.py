@@ -94,3 +94,7 @@ def load_data():
 
     return Dtr, Val, Dte
 
+if __name__ == '__main__':
+    Dtr, Val, Dte = load_data()
+
+    print(Dte['data'])
