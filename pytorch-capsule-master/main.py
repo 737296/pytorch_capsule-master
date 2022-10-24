@@ -88,7 +88,9 @@ def test(epoch):
     test_loss = 0
     correct = 0
     for data, target in test_loader:
+        # 类别标签
         target_indices = target
+
         target_one_hot = to_one_hot(target_indices, length=network.digits.num_units)
 
         data, target = data.cuda(), target_one_hot.cuda()
