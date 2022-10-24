@@ -3,9 +3,9 @@ import os.path
 from PIL import Image
 
 # 准备拉伸的原图片存储路径
-infile = r'C:\Users\12859\Desktop\123\123\dog_gray'
+infile = r'C:\Users\Administrator\Desktop\456\train_gray\2'
 # 拉伸后的图片存储路径
-outfile = r'C:\Users\12859\Desktop\123\123\dog_gray_2828'
+outfile = r'C:\Users\Administrator\Desktop\456\train_gray_2828\2'
 
 list_img = os.listdir(infile)
 n = 0
