@@ -170,6 +170,9 @@ def train_start(epoch):
 def start(num_epochs):
     for epoch in range(1, num_epochs + 1):
         last_loss = train_start(epoch)  # 执行一次训练
+        # 保存模型权重
+        if epoch in range(90,num_epochs):
+            torch.save(network.state_dict(), "model/crackAndDamageAndNormal.{}.pth".format(epoch))
         test(epoch)  # 执行一次测试
         if last_loss < early_stop_loss:
             break
