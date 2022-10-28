@@ -6,7 +6,7 @@ import torch.nn.functional as F
 from capsule_network import CapsuleNetwork
 
 # 导入需要预测的图片(已经经过处理)
-img_pth = "./predictImg/P_ (19).png"
+img_pth = "./predictImg/WO_ (1).png"
 img = Image.open(img_pth)
 transform = transforms.Compose([transforms.ToTensor()])
 image=transform(img)
@@ -32,7 +32,7 @@ network = CapsuleNetwork(image_width=28,
                          output_unit_size=output_unit_size).cuda()
 
 # 选择权重文件
-model = torch.load("./model/crackAndDamageAndNormal.99.pth", map_location=device)
+model = torch.load("./model/crackAndDamageAndNormal.94.pth", map_location=device)
 network.load_state_dict(model)
 network.eval()
 print(image.shape)

@@ -171,7 +171,7 @@ def start(num_epochs):
     for epoch in range(1, num_epochs + 1):
         last_loss = train_start(epoch)  # 执行一次训练
         # 保存模型权重
-        if epoch in range(90,num_epochs):
+        if epoch in range(190,num_epochs):
             torch.save(network.state_dict(), "model/crackAndDamageAndNormal.{}.pth".format(epoch))
         test(epoch)  # 执行一次测试
         if last_loss < early_stop_loss:
@@ -188,7 +188,7 @@ def log():
 
 
 if __name__ == "__main__":
-    num_epochs = 100
+    num_epochs = 201
     start(num_epochs)
     # 写入log 数据
     file = open(flieName, 'a')
