@@ -120,7 +120,8 @@ class CapsuleLayer(nn.Module):
         u_hat = torch.matmul(W, x)
 
         # Initialize routing logits to zero.
-        b_ij = torch.zeros(1, self.in_channels, self.num_units, 1).cuda()
+        # b_ij = torch.zeros(1, self.in_channels, self.num_units, 1).cpu()
+        b_ij = torch.zeros(1, self.in_channels, self.num_units, 1)
 
         # Iterative routing.
         num_iterations = 3
